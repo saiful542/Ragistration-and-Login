@@ -1,5 +1,8 @@
 const form = document.forms
-console.log(form)
+const firstName = document.querySelector('.first-name')
+const lastName = document.querySelector('.last-name')
+const usrEmail = document.querySelector('.user-email')
+const userPassword = document.querySelector('.user-password')
 
 
 const check = document.querySelector('.check')
@@ -9,11 +12,8 @@ check.addEventListener('change', (e) => {
     const pass = document.querySelector('.user-password')
     const v = pass.value
     if (check.checked) {
-
         pass.type = 'text'
         console.log(pass.type)
-
-
     }
 
     else {
@@ -21,6 +21,5 @@ check.addEventListener('change', (e) => {
         pass.type = 'password'
         document.querySelector('.user-password').value = v
     }
-
 
 })
