@@ -1,1 +1,1 @@
-console.log(document.forms)
+console.log(document.forms.documen.getg)
