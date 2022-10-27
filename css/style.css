@@ -31,10 +31,13 @@
     align-items: center;
     height: 100vh;
 }
+.font-light{
+    font-weight: 400;
+}
 
 .registration-form {
     padding: 48px 40px 36px;
-    border: 1px solid rgb(184, 184, 184);
+    border: 1px solid rgb(206, 206, 206);
     display: flex;
     align-items: center;
     gap: 50px;
@@ -72,11 +75,15 @@
     padding: 7px 8px;
     border-radius: 4px;
     color: #202124;
-    border: 1px solid rgb(184, 184, 184);
+    border: 1px solid rgb(206, 206, 206);
     outline: none;
 }
+
+.registration-form .left-side form .massage{
+    font-size: 12px;
+}
 .registration-form .left-side form input[type=checkbox]{
-    width: 20px;
+    width: 18px;
 }
 
 input:focus {
@@ -104,7 +111,7 @@ input:focus~.floating-label {
     justify-content: space-between;
 }
 .registration-form .left-side form .content .redirect-login a{
-    color: #1a73e8;
+    color: rgb(26, 115, 232);
     font-weight: bold;
     font-size: 14px;
 
