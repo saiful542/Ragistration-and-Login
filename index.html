@@ -55,15 +55,15 @@
                         <div class="main-heading">
                             <h2 class="font-light">Create your Google Account</h2>
                         </div>
-                        <form action="" class="form">
+                        <form action="" id="reg-form">
                             <div class="full-field">
                                 <div class="field">
                                     <div class="input-field">
-                                        <input type="text" required class="first-name">
+                                        <input type="text"  class="first-name" >
                                         <span class="floating-label">First name</span>
                                     </div>
                                     <div class="input-field">
-                                        <input type="text" required class="last-name">
+                                        <input type="text"  class="last-name">
                                         <span class="floating-label">Last name</span>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                             <div class="full-field">
                                 <div class="field">
                                     <div class="input-field">
-                                        <input type="text" name="email" required class="user-email">
+                                        <input type="text" name="email"  class="user-email">
                                         <span class="floating-label">Email</span>
                                     </div>
                                 </div>
@@ -85,11 +85,11 @@
                             <div class="full-field">
                                 <div class="field">
                                     <div class="input-field">
-                                        <input type="password" name="password" required class="user-password">
+                                        <input type="password" name="password"  class="user-password">
                                         <span class="floating-label">Password</span>
                                     </div>
                                     <div class="input-field">
-                                        <input type="password" name="confirm_password" required class="retype-password">
+                                        <input type="password" name="confirm_password"  class="retype-password">
                                         <span class="floating-label">Confirm</span>
                                     </div>
                                 </div>
@@ -99,7 +99,9 @@
                             </div>
                             <div class="full-field">
                                 <div class="field checkbox-field">
-                                    <input type="checkbox" name="show" id="" class="check">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" name="show" id="" class="check">
+                                    </div>
                                     <label for="checkbox">Show password</label>
                                 </div>
                             </div>
@@ -108,7 +110,7 @@
                                     <a href="./login.html">Sign in instead</a>
                                 </div>
                                 <div class="submit-button-wrapper">
-                                    <button>Submit</button>
+                                    <button class="signup-button">Submit</button>
                                 </div>
                             </div>
 
