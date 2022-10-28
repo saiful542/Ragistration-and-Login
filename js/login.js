@@ -2,17 +2,15 @@ const form = document.forms['login-form']
 const userEmail = document.querySelector('.login-form .user-email')
 const loginButton = document.querySelector('.login-form .login-button')
 const mailError = document.querySelector('.user-email').parentElement.parentElement.parentElement.lastElementChild
-const passwordError=document.querySelector('.user-password').parentElement.parentElement.parentElement.lastElementChild
 let validation = false;
 
-console.log(passwordError)
+console.log(mailError)
 
 
 
 loginButton.addEventListener('click', (e) => {
     e.preventDefault();
     checkEmailFieldError()
-    console.log(userEmail.value)
 
     const savedUser = JSON.parse(localStorage.getItem('user'))
     console.log(savedUser)

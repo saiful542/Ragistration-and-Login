@@ -57,13 +57,8 @@ signupButton.addEventListener('click', (e) => {
         console.log(user)
 
         localStorage.setItem('user',JSON.stringify(user))
-        window.location.href='../first_login_page.html'
-        
+        window.location.href='../first_login_page.html' 
     }
-    
-
-
-    console.log(JSON.parse(localStorage.getItem('user')))
 
 })
 
@@ -143,7 +138,7 @@ const checkPasswordFieldError = () => {
 
 
 
-
+//show password
 check.addEventListener('change', (e) => {
     const passwordValue = userPassword.value
     if (check.checked) {

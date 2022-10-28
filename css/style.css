@@ -24,6 +24,33 @@
 .text-center {
     text-align: center;
 }
+.text-start {
+    align-self: flex-start;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+.content-align{
+    display: flex;
+    align-items: center;
+}
+
+.show-user-email{
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 35px;
+    /* width: 50%; */
+    color: #555555;
+    gap: 8px;
+    height: 32px;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
 
 
 .content-wrapper {
