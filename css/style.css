@@ -53,31 +53,33 @@
     flex: 2;
 }
 
-.registration-form .left-side form {
+form {
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 20px 2px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
-.registration-form .left-side form .submit-button-wrapper button {
+form .submit-button-wrapper button {
     background: rgb(26, 115, 232);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: all .3s;
+    font-weight: bold;
 }
 
-.registration-form .left-side form .submit-button-wrapper button:hover {
+form .submit-button-wrapper button:hover {
     background: rgb(4, 91, 204);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 
-.registration-form .left-side form input {
+form input {
     width: 100%;
     font-size: 14px;
     padding: 7px 8px;
@@ -87,24 +89,24 @@
     outline: none;
 }
 
-.registration-form .left-side form .massage {
+form .massage {
     font-size: 12px;
 }
 
-.registration-form .left-side form .checkbox-wrapper input[type=checkbox] {
+form .checkbox-wrapper input[type=checkbox] {
     width: 18px;
     height: 18px;
     cursor: pointer;
 }
 
-.registration-form .left-side form .checkbox-wrapper {
+form .checkbox-wrapper {
     padding: 10px;
     border-radius: 50%;
     display: flex;
     transition: all .3s;
 }
 
-.registration-form .left-side form .checkbox-wrapper:hover {
+form .checkbox-wrapper:hover {
     background: rgb(245, 245, 245);
     cursor: pointer;
 }
@@ -123,19 +125,19 @@ input:focus~.floating-label {
     color: #1a73e8 !important;
 }
 
-.registration-form .left-side form .full-field .field {
+form .full-field .field {
     display: flex;
     gap: 10px;
     align-items: center;
 
 }
 
-.registration-form .left-side form .full-field .massage {
+form .full-field .massage {
     color: #818181;
     padding: 2px 5px;
 }
 
-.registration-form .left-side form .content {
+form .content {
     padding-top: 50px;
     display: flex;
     align-items: center;
@@ -143,18 +145,18 @@ input:focus~.floating-label {
 }
 
 
-.registration-form .left-side form .content .redirect-login {
+form .content .redirect-login {
     padding: 6px;
     border-radius: 4px;
     transition: all.2s;
 }
 
-.registration-form .left-side form .content .redirect-login:hover {
+form .content .redirect-login:hover {
     background: rgb(241, 248, 255) !important;
     cursor: pointer;
 }
 
-.registration-form .left-side form .content .redirect-login a {
+form .content .redirect-login a {
     color: rgb(26, 115, 232);
     font-weight: bold;
     font-size: 14px;
@@ -186,7 +188,7 @@ input:focus~.floating-label,
 .active {
     top: 0 !important;
     left: 4px;
-    font-size: 12px;
+    font-size: 12px !important;
     background: white;
     padding: 0 5px;
 }
@@ -196,13 +198,13 @@ input:focus~.floating-label,
     pointer-events: none;
     left: 10px;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     color: #8f8f8f;
     transition: 0.2s ease all;
     font-size: 14px;
 }
 
-.error-wrapper{
+.error-wrapper {
     display: flex;
     color: rgb(194, 0, 0);
     align-items: center;
@@ -210,21 +212,67 @@ input:focus~.floating-label,
     padding: 1px 0;
 }
 
+/* Login */
+.login-form {
+    padding: 48px 40px 36px;
+    border: 1px solid rgb(206, 206, 206);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 50px; */
+    max-width: 450px;
+    border-radius: 8px;
+    transition: all .4s;
+    flex: 1;
+}
+
+.login-form input {
+    padding: 16px 8px;
+}
+
+.login-form .learn-more {
+    font-size: 14px;
+    color: #747474;
+    padding-top: 20px;
+}
+
+.login-form .forgot {
+    margin-top: -20px;
+}
+
+.login-form .link {
+    color: rgb(26, 115, 232);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-form .main-heading h4,
+.login-form .main-heading h1 {
+    padding: 5px 0;
+}
+
 
 @media only screen and (max-width:600px) {
-    .registration-form .left-side form .full-field .field {
+    form .full-field .field {
         flex-direction: column;
         gap: 24px;
     }
 
-    .registration-form .left-side form .full-field .checkbox-field {
+    form .full-field .checkbox-field {
         flex-direction: row;
     }
 
-    .registration-form {
+    .registration-form,
+    .login-form {
         width: 100%;
         border: none;
         padding: 48px 20px 36px;
+    }
+
+    .login-form {
+        width: 100%;
+        border: none;
+        padding: 48px 5px 36px;
     }
 
     .registration-form .right-side {

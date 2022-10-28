@@ -1,7 +1,7 @@
 const form = document.forms['reg-form']
 const firstName = document.querySelector('.registration-form .left-side .first-name')
 const lastName = document.querySelector('.registration-form .left-side .last-name')
-const usrEmail = document.querySelector('.registration-form .left-side .user-email')
+const userEmail = document.querySelector('.registration-form .left-side .user-email')
 const userPassword = document.querySelector('.registration-form .left-side .user-password')
 const retypePassword = document.querySelector('.registration-form .left-side .retype-password')
 const signupButton = document.querySelector('.registration-form .left-side .signup-button')
@@ -10,11 +10,12 @@ const allInputs = document.querySelectorAll('.registration-form .left-side input
 const regForm = document.querySelectorAll('.registration-form')
 const check = document.querySelector('.checkbox-wrapper .check')
 const checkWrapper = document.querySelector('.left-side .checkbox-wrapper')
-const mailError = document.querySelector('.user-email').parentElement.parentElement.parentElement.lastElementChild
+const emailError = document.querySelector('.user-email').parentElement.parentElement.parentElement.lastElementChild
 const nameError = document.querySelector('.first-name').parentElement.parentElement.parentElement.lastElementChild
 const passwordError = document.querySelector('.user-password').parentElement.parentElement.parentElement.lastElementChild
 const confirmError = document.querySelector('.retype-password').parentElement.parentElement.parentElement.lastElementChild
 let validation = false;
+let user;
 
 
 
@@ -45,15 +46,24 @@ signupButton.addEventListener('click', (e) => {
 
     //checkpassword
     checkPasswordFieldError()
-    console.log(validation)
-    if(validation){
-        const user={
 
+    if (validation) {
+         user = {
+            FirstName: firstName.value,
+            LastName: lastName.value,
+            email: userEmail.value,
+            password: userPassword.value
         }
+        console.log(user)
+
+        localStorage.setItem('user',JSON.stringify(user))
+        window.location.href='../first_login_page.html'
+        
     }
     
 
 
+    console.log(JSON.parse(localStorage.getItem('user')))
 
 })
 
@@ -83,16 +93,16 @@ const checkNameFieldError = () => {
 
 const checkEmailFieldError = () => {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!usrEmail.value) {
-        mailError.innerHTML = `<div class="error-wrapper"><svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><p>Choose a Gmail address</p></div>`
+    if (!userEmail.value) {
+        emailError.innerHTML = `<div class="error-wrapper"><svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><p>Choose a Gmail address</p></div>`
         validation = false;
     }
-    else if (!usrEmail.value.match(mailformat)) {
-        mailError.innerHTML = `<div class="error-wrapper"><svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><p>You have entered an invalid email address</p></div>`
+    else if (!userEmail.value.match(mailformat)) {
+        emailError.innerHTML = `<div class="error-wrapper"><svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg><p>You have entered an invalid email address</p></div>`
         validation = false;
     }
     else {
-        mailError.innerHTML = `<div></div>`
+        emailError.innerHTML = `<div></div>`
         validation = true;
     }
 }
