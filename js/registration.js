@@ -48,7 +48,7 @@ signupButton.addEventListener('click', (e) => {
     checkPasswordFieldError()
 
     if (validation) {
-         user = {
+        user = {
             FirstName: firstName.value,
             LastName: lastName.value,
             email: userEmail.value,
@@ -56,8 +56,9 @@ signupButton.addEventListener('click', (e) => {
         }
         console.log(user)
 
-        localStorage.setItem('user',JSON.stringify(user))
-        window.location.href='../first_login_page.html' 
+        localStorage.setItem('user', JSON.stringify(user))
+        location.href = form.action
+
     }
 
 })
