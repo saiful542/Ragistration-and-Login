@@ -105,6 +105,17 @@ form .submit-button-wrapper button:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.input-error-alert{
+    border-color: rgb(177, 1, 1) !important;
+}
+input:focus~.label-error-alert{
+    color: rgb(177, 1, 1) !important;
+}
+
+input:focus~.floating-label {
+    color: rgb(4, 91, 204);
+}
+
 
 form input {
     width: 100%;
@@ -143,14 +154,12 @@ form .checkbox-wrapper:hover {
 }
 
 input:focus {
-    border: 1px solid rgb(26, 115, 232) !important;
+    border: 1px solid rgb(26, 115, 232) ;
     outline: none;
 
 }
 
-input:focus~.floating-label {
-    color: #1a73e8 !important;
-}
+
 
 form .full-field .field {
     display: flex;

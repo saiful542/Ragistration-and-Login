@@ -7,17 +7,10 @@ const checkWrapper = document.querySelector('.checkbox-wrapper')
 let validation = false;
 const savedUser = JSON.parse(localStorage.getItem('user'))
 document.querySelector('.user-email-wrapper').innerHTML = `<p>${savedUser.email}</p>`
-
-console.log(userPassword)
-
-
-
 loginButton.addEventListener('click', (e) => {
 
     e.preventDefault();
     checkPasswordFieldError()
-    // const savedUser = JSON.parse(localStorage.getItem('user'))
-    console.log(savedUser)
     if (validation) {
         if (savedUser && (savedUser.password == userPassword.value)) {
             location.href = form.action
@@ -27,8 +20,6 @@ loginButton.addEventListener('click', (e) => {
         }
     }
 })
-
-
 
 // checkPasswordFieldError
 
