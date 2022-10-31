@@ -112,6 +112,10 @@ input:focus~.label-error-alert{
     color: rgb(177, 1, 1) !important;
 }
 
+.label-error-alert.active{
+    color: rgb(177, 1, 1) !important;
+}
+
 input:focus~.floating-label {
     color: rgb(4, 91, 204);
 }
